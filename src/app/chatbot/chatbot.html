@@ -1,0 +1,15 @@
+<div class="chatbot-container">
+  <h2>Chatbot Inteligente</h2>
+  <!-- Aquí iría la interfaz de conversación -->
+  @for (mensaje of mensajes; track mensaje){
+
+  <p>{{ mensaje }}</p>
+
+  }
+  <input
+    type="text"
+    [(ngModel)]="entrada"
+    placeholder="Escribe tu mensaje..."
+  />
+  <button (click)="enviarMensaje()">Enviar</button>
+</div>

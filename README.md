@@ -1,59 +1,12 @@
 # Chatbot
 
-This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 19.1.7.
+Este proyecto Angular es el base del chatbot. Desde aca se desarrollan las funcionalidades del mismo.
 
-## Development server
 
-To start a local development server, run:
+Para exportar el bot hay que correr un simple script: npm run el-build. Lo que hace es generar la carpeta dist como ng buld convencional pero ademas, generar un archivo llamado chatbot.js. Este es la combinacion de main.js, polyfills.js y styles.js.
 
-```bash
-ng serve
-```
+Una vez tenemos este archivo, solo hay que usarlo en el proyecto que se necesito de la siguiente manera:
 
-Once the server is running, open your browser and navigate to `http://localhost:4200/`. The application will automatically reload whenever you modify any of the source files.
+<script type="text/javascript" src="chatbot.js"></script>
 
-## Code scaffolding
-
-Angular CLI includes powerful code scaffolding tools. To generate a new component, run:
-
-```bash
-ng generate component component-name
-```
-
-For a complete list of available schematics (such as `components`, `directives`, or `pipes`), run:
-
-```bash
-ng generate --help
-```
-
-## Building
-
-To build the project run:
-
-```bash
-ng build
-```
-
-This will compile your project and store the build artifacts in the `dist/` directory. By default, the production build optimizes your application for performance and speed.
-
-## Running unit tests
-
-To execute unit tests with the [Karma](https://karma-runner.github.io) test runner, use the following command:
-
-```bash
-ng test
-```
-
-## Running end-to-end tests
-
-For end-to-end (e2e) testing, run:
-
-```bash
-ng e2e
-```
-
-Angular CLI does not come with an end-to-end testing framework by default. You can choose one that suits your needs.
-
-## Additional Resources
-
-For more information on using the Angular CLI, including detailed command references, visit the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
+Ademas, por ahora, el componente se llama <chatbot-element></chatbot-element> por lo tanto hay que llamarlo tambien en el proyecto externo que se va a utilizar.
