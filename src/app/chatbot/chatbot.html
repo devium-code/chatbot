@@ -1,15 +1,28 @@
-<div class="chatbot-container">
-  <h2>Chatbot Inteligente</h2>
-  <!-- Aquí iría la interfaz de conversación -->
-  @for (mensaje of mensajes; track mensaje){
+<!-- Burbuja flotante -->
+<div class="chatbot-bubble" (click)="toggleChat()">
+  <i
+  [ngClass]="{
+    'fa-solid': true,
+    'fa-comment-dots': !showChat,
+    'fa-xmark': showChat,
+    'rotate-enter': !showChat,
+    'rotate-leave': showChat
+  }">
+</i>
+</div>
 
-  <p>{{ mensaje }}</p>
+<div class="chatbot-window"
+     [@slideInOut]="showChat ? 'open' : 'closed'">
+  <div class="chatbot-window-header">
+    <h3>Chatbot</h3>
+    <button class="close-btn" (click)="toggleChat()">×</button>
+  </div>
+  <div class="chatbot-window-body">
+    <p>¡Hola! Soy Devium, dime que necesitas...</p>
+  </div>
+  <div class="chatbot-window-footer">
+    <input type="text" placeholder="Escribe tu mensaje..." />
 
-  }
-  <input
-    type="text"
-    [(ngModel)]="entrada"
-    placeholder="Escribe tu mensaje..."
-  />
-  <button (click)="enviarMensaje()">Enviar</button>
+    <button><i class="fa-solid fa-paper-plane"></i></button>
+  </div>
 </div>

@@ -4,12 +4,13 @@ import { BrowserModule } from '@angular/platform-browser';
 import { importProvidersFrom } from '@angular/core';
 import { createCustomElement } from '@angular/elements';
 import { ChatbotComponent } from './app/chatbot/chatbot';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 (async () => {
   // Genera los providers y aplánalos (flat) en un arreglo
   const providers = [
     { provide: APP_BASE_HREF, useValue: '/' },
-    importProvidersFrom(BrowserModule)
+    importProvidersFrom(BrowserModule, BrowserAnimationsModule)
   ].flat();
 
   const app = await createApplication({ providers });
