@@ -1,0 +1,21 @@
+name: DeployChatBot
+
+on:
+  push:
+    branches:
+      - main  # Se ejecuta solo cuando haces push en `main`
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - name: 🛠️ Check out code
+        uses: actions/checkout@v3
+
+      - name: 🔑 Set up SSH
+        uses: webfactory/ssh-agent@v0.5.3
+        with:
+          ssh-private-key: ${{ secrets.KeyDeployVMDocker1 }}
+
+      - name: 🚀 Ejecutar deploy en la VM
+        run: ssh -p 779 -o StrictHostKeyChecking=no max@devium.ar "bash /srv/git/production/deploychatbot.sh"
