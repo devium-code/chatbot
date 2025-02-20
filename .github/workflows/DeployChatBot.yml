@@ -3,7 +3,7 @@ name: DeployChatBot
 on:
   push:
     branches:
-      - main  # Se ejecuta solo cuando haces push en `main` OK
+      - main  # Se ejecuta solo cuando haces push en `main`
 
 jobs:
   deploy:
