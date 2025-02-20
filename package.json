@@ -11,7 +11,8 @@
     "separator (not execute)": " -----------------------------------------",
     "el-build": "npm run el-build-task && npm run el-package-task",
     "el-build-task": "ng build --output-hashing=none --configuration production",
-    "el-package-task": "cat ./dist/chatbot/{polyfills,main}.js > ./dist/chatbot.js"
+    "el-package-task": "cat ./dist/chatbot/polyfills.js ./dist/chatbot/main.js > ./dist/chatbot.js"
+
   },
   "private": true,
   "dependencies": {
