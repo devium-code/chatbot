@@ -32,7 +32,8 @@ import { FormsModule } from '@angular/forms';
 })
 export class ChatbotComponent implements OnInit{
   ngOnInit(): void {
-    console.log('Esto es para ver si hace el build automatico...')
+    console.log('Esto es para ver si hace el build automatico...');
+    console.warn('Esto es un warning auto generado para probar');
   }
 
   mensajes: string[] = [];
