@@ -1,6 +1,6 @@
 import { animate, state, style, transition, trigger } from '@angular/animations';
 import { CommonModule } from '@angular/common';
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 
 @Component({
@@ -30,8 +30,10 @@ import { FormsModule } from '@angular/forms';
     ])
   ]
 })
-export class ChatbotComponent {
-
+export class ChatbotComponent implements OnInit{
+  ngOnInit(): void {
+    console.log('Esto es para ver si hace el build automatico...')
+  }
 
   mensajes: string[] = [];
   entrada: string = '';

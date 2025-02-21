@@ -8,9 +8,7 @@ import { ChatbotComponent } from './chatbot/chatbot';
   templateUrl: './app.component.html',
   styleUrl: './app.component.scss'
 })
-export class AppComponent implements OnInit{
-  ngOnInit(): void {
-    console.log('Esto es para ver si hace el build automatico...')
-  }
+export class AppComponent{
+
   title = 'chatbot';
 }
