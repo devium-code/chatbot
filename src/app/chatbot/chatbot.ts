@@ -37,15 +37,6 @@ export class ChatbotComponent {
   entrada: string = '';
   showChat = false;
 
-  enviarMensaje() {
-    if (this.entrada.trim()) {
-      this.mensajes.push(this.entrada);
-      // Aquí llamarías a tu servicio de IA para obtener una respuesta
-      this.mensajes.push('Respuesta del chatbot');
-      this.entrada = '';
-    }
-  }
-
   toggleChat(){
     this.showChat = !this.showChat;
   }
